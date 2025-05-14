@@ -1,0 +1,11 @@
+theme = "tokyonight"
+font-family = "JetBrainsMono Nerd Font"
+font-size = 18
+mouse-hide-while-typing = true
+background-opacity = .8
+background-blur = true
+shell-integration-features = no-cursor
+cursor-style = block
+window-padding-x = 10
+window-padding-y = 10
+font-feature = -liga, -calt,
