@@ -1,15 +1,16 @@
 return {
     "williamboman/mason-lspconfig.nvim",
-    dependencies = { "neovim/nvim-lspconfig" },
+    dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim"},
     config = function()
+      require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "omnisharp",  -- C#
+          -- "omnisharp",  -- C#
           "gopls",      -- Go
           "ts_ls",      -- JavaScript/TypeScript
           "pyright",    -- Python
-          "jsonls",     -- JSON
-          "eslint",     -- Optional: Linter for JavaScript/TypeScript
+          "jsonls",   -- JSON
+          "eslint", -- Optional: Linter for JavaScript/TypeScript
           "lua_ls",     -- Lua (note: renamed from sumneko_lua to lua_ls)
         },
       })
