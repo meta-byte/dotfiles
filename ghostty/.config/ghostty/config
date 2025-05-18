@@ -1,5 +1,6 @@
 theme = "tokyonight"
 font-family = "JetBrainsMono Nerd Font"
+font-family = "Noto Sans CJK JP"
 font-size = 18
 mouse-hide-while-typing = true
 background-opacity = .8
