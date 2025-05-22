@@ -1,16 +1,11 @@
 format = """
 [╭](fg:current_line)\
 $os\
+$username\
+$hostname\
 $directory\
 $git_branch\
 $fill\
-$nodejs\
-$dotnet\
-$python\
-$go\
-$cmd_duration\
-$time\
-$username\
 $line_break\
 $character\
 """
@@ -34,14 +29,14 @@ red = '#f7768e'
 yellow = '#e0af68'
 
 [os]
-format = '(fg:current_line)[](fg:cyan)[$symbol ](fg:primary bg:cyan)[](fg:cyan)'
+format = '[\[$symbol btw\]](fg:cyan)'
 disabled = false
 
 [os.symbols]
 Alpine = ''
 Amazon = ''
 Android = ''
-Arch = ''
+Arch = '󰣇'
 CentOS = ''
 Debian = ''
 EndeavourOS = ''
@@ -72,13 +67,20 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰷏 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
-home_symbol = "~/"
+format = '[─](fg:current_line)[\[  $path\]](fg:purple)'
+home_symbol = "~" 
 
+[username]
+format = '[─](fg:current_line)[\[ $user](fg:blue)'
+show_always = true
+
+[hostname]
+format = '[@](fg:blue)[$hostname\]](fg:blue)'
+ssh_only = false
 
 [git_branch]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)[](fg:box)'
-symbol = ' '
+format = '[─](fg:current_line)[\[$symbol $branch\]](fg:green)'
+symbol = '󰘬'
 
 [nodejs]
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
@@ -93,7 +95,7 @@ format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[�
 symbol = ' python'
 
 [fill]
-symbol = '─'
+symbol = ' '
 style = 'fg:current_line'
 
 [cmd_duration]
@@ -111,11 +113,8 @@ format = '[─](fg:current_line)[](fg:purple)[󰦖 ](fg:primary bg:purple)[�
 time_format = '%H:%M'
 disabled = false
 
-[username]
-format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $user](fg:foreground bg:box)[](fg:box) '
-show_always = true
-
 [character]
 format = """
 [╰─$symbol](fg:current_line) """
 success_symbol = '[>](fg:current_line)'
+error_symbol = '[>](fg:current_line)'
