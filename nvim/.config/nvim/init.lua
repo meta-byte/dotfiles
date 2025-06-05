@@ -1,4 +1,4 @@
 require("core.set")
-require("core.lazy")
+require("config.lazy")
 require("core.remap")
 

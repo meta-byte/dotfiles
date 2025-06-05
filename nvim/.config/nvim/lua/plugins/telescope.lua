@@ -1,8 +1,9 @@
 return {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      local builtin = require("telescope.builtin")
-      require("keymaps.telescope")
-    end,
-  }
+  "nvim-telescope/telescope.nvim",
+  dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzf-native.nvim" },
+  config = function()
+    require("telescope").setup()
+    local TelescopeKeymaps = require("keymaps.telescope")
+    TelescopeKeymaps.setup()
+  end
+}

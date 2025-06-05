@@ -13,10 +13,10 @@ return {
       ensure_installed = {
         -- "omnisharp",  -- C#
         "gopls",      -- Go
-        "ts_ls",   -- JavaScript/TypeScript (use tsserver instead of ts_ls)
+        "ts_ls",      -- JavaScript/TypeScript (use tsserver instead of ts_ls)
         "pyright",    -- Python
         "jsonls",     -- JSON
-        "eslint",     -- Optional: Linter for JavaScript/TypeScript
+        "eslint",     -- Linter for JavaScript/TypeScript
         "lua_ls",     -- Lua (note: renamed from sumneko_lua to lua_ls)
       },
       -- Handler functions for each server
